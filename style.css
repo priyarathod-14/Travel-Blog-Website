@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f6f2;
+    color: #222;
+}
+
+/* NAVIGATION */
+
+nav {
+    height: 70px;
+    background: #102c45;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #d7b56d;
+}
+
+/* BANNER */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(7, 22, 32, 0.72),
+        rgba(7, 22, 32, 0.25),
+        rgba(7, 22, 32, 0.1)
+    );
+}
+
+.banner-content {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+}
+
+.small-title,
+.section-label {
+    color: #c89f55;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.banner-content h1 {
+    font-size: 65px;
+    line-height: 1;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.banner-content h1 span {
+    color: #d7b56d;
+}
+
+.banner-description {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 500px;
+    color: #f1f1f1;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 13px 23px;
+    background: #d7b56d;
+    color: #102c45;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.explore-btn:hover {
+    background: white;
+}
+
+/* FLOATING LOCATION CARD */
+
+.location-card {
+    position: absolute;
+    z-index: 3;
+    right: 7%;
+    bottom: 45px;
+    background: rgba(255, 255, 255, 0.95);
+    width: 250px;
+    padding: 20px 22px;
+    border-left: 4px solid #d7b56d;
+}
+
+.location-card span {
+    font-size: 10px;
+    color: #9a7738;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.location-card h3 {
+    margin: 8px 0 4px;
+    color: #102c45;
+    font-size: 22px;
+}
+
+.location-card p {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+/* GENERAL SECTIONS */
+
+section:not(.banner) {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+section h2 {
+    color: #102c45;
+    font-size: 34px;
+    margin-top: 8px;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    max-width: 900px !important;
+}
+
+.intro-text {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* CENTER LABEL */
+
+.center {
+    text-align: center;
+}
+
+/* DESTINATIONS */
+
+#destinations h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e4e0d8;
+    box-shadow: 0 5px 18px rgba(40, 50, 55, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    transition: 0.25s;
+    box-shadow: 0 10px 25px rgba(40, 50, 55, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content h3 {
+    color: #102c45;
+    font-size: 25px;
+    margin: 7px 0 10px;
+}
+
+.content > p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.travel-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 15px;
+    padding-top: 12px;
+    gap: 10px;
+}
+
+.travel-info p {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.travel-info b {
+    color: #102c45;
+}
+
+/* ABOUT */
+
+.about {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #102c45;
+    color: white;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about h2 {
+    color: white;
+    font-size: 38px;
+}
+
+.about-content > p {
+    color: #d9e0e5;
+    line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact > p:last-child {
+    color: #666;
+}
+
+/* FOOTER */
+
+footer {
+    background: #081d2d;
+    color: #aaa;
+    text-align: center;
+    padding: 17px;
+    font-size: 13px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .banner-content h1 {
+        font-size: 50px;
+    }
+
+    .location-card {
+        right: 5%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    nav {
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin: 0 7px;
+    }
+
+    .banner {
+        height: 500px;
+    }
+
+    .banner-content {
+        left: 25px;
+        right: 25px;
+    }
+
+    .banner-content h1 {
+        font-size: 42px;
+    }
+
+    .banner-description {
+        font-size: 15px;
+    }
+
+    .location-card {
+        display: none;
+    }
+
+    section:not(.banner) {
+        width: 100%;
+        padding: 50px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        display: block;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+}
